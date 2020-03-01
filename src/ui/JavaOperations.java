@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
-public class lab1{
+/**
+* Esta clase realiza operaciones basicas en java, esto incluye numeros reales, cadenas y arreglos. <br>
+*@author : Jhon Suescun Paz
+*@version : 29/02/2020/A
+*/
+
+public class JavaOperations{
 
 static int[] array1, array2, array3, A, B, C, unionR;
 static Scanner sc;
@@ -26,7 +32,11 @@ public static void inicializar(){
 	sc = new Scanner(System.in);
 }
 
-// con este metodo se introduce el menu 0 o principal
+/**
+*metodo que muestra el menu principal.<br>
+* <b>pre: </b> no se digitara un numero negativo o mayor que 3<br>
+* <b>post: </b> se abrira un sub-menu que corresponde al valor digitado <br>
+*/
 public static void menu0(){
 	
 	while(menu0){
@@ -63,7 +73,11 @@ public static void menu0(){
 	}
 }
 
-// con este metodo se intoduce el menu 1
+/**
+* metodo que muestra el sub-menu de las operaciones con cadenas de texto. <br>
+* <b>pre: </b> no se digitara un numero negativo ni mayor a 5 <br>
+* <b>post: </b> se realiza la operacion digitada<br>
+*/
 public static void menu1(){
 	
 	while(menu1){
@@ -99,7 +113,11 @@ public static void menu1(){
 	}	
 }
 
-// con este metodo se introduce el menu 2
+/**
+* metodo que muestra el sub-menu de las opercaiones con numeros reales. <br>
+* <b>pre: </b> no se digitara un numero negativo o mayor a 4 <br>
+* <b>post: </b> se realizara la funcion segun el numero digitado <br>
+*/
 public static void menu2(){
 	
 	while(menu2){
@@ -131,7 +149,11 @@ public static void menu2(){
 
 }
 
-// con este metodo se introduce el menu 3 
+/**
+* metodo que muestra el sub-menu de las operaciones con arreglos. <br>
+* <b>pre: </b> no se digitara un numero negativo ni mayor a 9 <br>
+* <b>post: </b> se realizara la funcion segun el numero digitado <br>
+*/ 
 public static void menu3(){
 	
 	while(menu3){
@@ -223,7 +245,11 @@ public static void menu3(){
 	}	
 }
 
-//con este metodo 
+/**
+* metodo que recoge las cadenas de texto que se usaran para operar. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> se crean tres nuevos strings <br>
+*/ 
 public static void inWords(){	
 	
 	System.out.println(" >> ingrese tres cadenas");
@@ -245,6 +271,11 @@ public static void inWords(){
 	}
 }
 
+/**
+* metodo que muetra el tamaño de las cadenas recogidas.<br>
+* <b>pre: </b> <br>
+* <b>post: </b> muestra el tamaño de cada una de las cadenas <br>
+*/
 public static void longCadena(){
 	System.out.println(" >> Las longitudes de las cadenas son: ");
 	for(int i = 1 ; i<=3 ; i++){
@@ -266,10 +297,20 @@ public static void longCadena(){
 	}
 }
 
+/**
+* metodo que muestra las concatenacion de las cadenas recogidas. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> muestra las palabras digitadas anteriormente concatenadas <br>
+*/
 public static void showWords(){
 	System.out.println(" >> las cadenas concatenadas son:\n  > "+word1+" "+word2+" "+word3+" <");
 }
 
+/**
+*metodo que muestra una letra de cada una de las cadenas segun la desicion del usuario. <br>
+* <b>pre: </b> no se escogera un numero negativo <br>
+* <b>post: </b> se obtiene el caracter de cada arreglos <br>
+*/
 public static void letterOfEachChain(){
 	System.out.print("\n  >> ingrese la posicion del caracter que quiere saber de cada una de las cadenas: ");
 	choice1 = sc.nextInt();
@@ -298,6 +339,11 @@ public static void letterOfEachChain(){
 		System.out.println("\n  >>ERROR: el numero escogido es mas grande que alguna de las cadenas<<");
 }
 
+/**
+* metodo que solicita 2 numeros reales al usuario, para ser usados en operaciones. <br>
+* <b>pre: </b> los numeros digitados deben ser mayores a 0 <br>
+* <b>post: </b> se guardaran numeros que posteiormente seran usados <br>
+*/
 public static void inNumbers(){
 	System.out.println("\n >> ingrese dos numeros reales mayores a 0: ");
 	
@@ -318,7 +364,11 @@ public static void inNumbers(){
 		
 }
 
-
+/**
+* metodo que muestra la divion ambos numeros digitados.<br>
+* <b>pre: </b> <br>
+* <b>post: </b> muestra la division de ambos numeros reales digitados<br>
+*/
 public static void division(){
 	double resultado1,resultado2;
 	
@@ -328,6 +378,11 @@ public static void division(){
 	System.out.println("\n >> la division de los numeros insertados\n  > cuando "+num1+"/"+num2+" es: "+resultado1+"\n  > cuando "+num2+"/"+num1+" es: "+resultado2);
 }
 
+/**
+* metodo que muestra la parte entera y el residuo de la diviosn de ambos numeros digitados.<br>
+* <b>pre: </b> <br>
+* <b>post: </b> muestra la parte entera y el residuo de la division de ambos numeros anteriormente digitados <br>
+*/
 public static void division2(){
 	double num3;
 	int int1,int2,res1,res2;
@@ -344,6 +399,11 @@ public static void division2(){
 	System.out.println("\n >> la division de los numeros insertados\n  > cuando "+num1+"/"+num2+" es: \n   - parte entera: "+int1+"\n   - residuo: "+res1+"\n\n  > cuando "+num2+"/"+num1+" es: \n   - parte entera: "+int1+"\n   - residuo: "+res2);
 }
 
+/**
+* metodo que recoge 3 arreglos que seran usados en operaciones.
+* <b>pre: </b> el tamaño del arreglo no puede ser menor a 0 o mayor a 10^9, ademas solo se pueden usar numeros enteros <br>
+* <b>post: </b> se crean tres nuevos arreglos con los datos ingresados por el usuario <br>
+*/
 public static void inArrays(){
 	int tam=0 ;
 	for(int i=1 ; i<=3 ; i++){
@@ -381,6 +441,35 @@ public static void inArrays(){
 	
 }//integrer.toString(int)
 
+/**
+* metodo que desplega en pantalla los arreglos digitados por el usuario.<br>
+* <b>pre: </b> <br>
+* <b>post: </b> muestra los arrglos anteriormente digitados en pantalla <br>
+*/
+public static void showArrays(){
+	String word, string1;
+	
+	word = "";
+	string1 = "";
+	
+	for(int i = 0 ; i<globalSize ; i++){
+		word = Integer.toString(C[i]);
+		string1 += ("| " + word + " ");
+	}
+	word = "";
+	
+	for(int j = 0 ; j<=string1.length(); j++)
+		word +="-";
+	System.out.print("\n   "+word);
+	System.out.print("\n   " + string1 + "|\n   ");
+	System.out.print(word);
+}
+
+/**
+* metodo que muestra el promedio de un arreglo, este es escogido por el usuario. <br>
+* <b>pre: </b> el arreglo escogido debe ser un numero positivo y menor o igual a 3, ademas este numero debe ser entero <br>
+* <b>post: </b> se devuelve el promedio de arreglo escogido <br>
+*/
 public static void averageArray(){
 	double average, suma;
 	suma = 0.0;
@@ -415,6 +504,11 @@ public static void averageArray(){
 	}
 }
 
+/**
+* metodo que muestra el mayor valor de los valores en un arreglo, este es escogido por el usuario.<br>
+* <b>pre: </b> el arreglo escogido debe ser un numero positivo y menor o igual a 3, ademas este numero debe ser entero <br>
+* <b>post: </b> se devuelve el mayor valor, segun el arreglos escogido <br>
+*/
 public static void biggerNum(){
 	int bigger;
 	
@@ -451,6 +545,12 @@ public static void biggerNum(){
 	}
 }
 
+
+/**
+* metodo que suma, resta o multiplica dos de los arreglos digitados por el usuario.<br>
+* <b>pre: </b> el valor digitado debe ser entero, positivo y menor o igual a 3 <br>
+* <b>post: </b> se realiza la operacion segun el valor escogido <br>
+*/
 public static void operationArray(){
 	boolean identify = true;
 	int operation ;
@@ -485,6 +585,11 @@ public static void operationArray(){
 	}
 }
 
+/**
+* metodo que solicita cuales seran los 2 metodos que usara en las operaciones. <br>
+* <b>pre: </b> el valor digitado debe ser positivo, entero y menor o igual a 3 <br>
+* <b>post: </b> se escogeran los dos arreglos usados para las operaciones aritmeticas <br>
+*/
 public static void chooseArray(){
 	boolean identify = true;
 	boolean allIdentify = true;
@@ -580,6 +685,11 @@ public static void chooseArray(){
 		}
 }
 
+/**
+* metodo que suma los dos arreglos escogidos por el usuario. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> se crea un arreglo suma, con la suma de los valores de los arreglos escogidos <br>
+*/
 public static void additionArray(){
 	int[] sum = new int[A.length];
 	
@@ -594,6 +704,11 @@ public static void additionArray(){
 	showArrays();
 }
 
+/**
+* metodo que resta los arreglos escogidos por el usuario. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> crea un arreglos resta, con los arreglos escogidos por el usuario <br>
+*/
 public static void subtractionArray(){
 	
 	int[] subtraction = new int[A.length];
@@ -607,6 +722,11 @@ public static void subtractionArray(){
 	showArrays();
 }
 
+/**
+* metodo que multiplica los arreglos escogidos por el usuario. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> crea un arreglo multiplicacion, con los arreglos escogidos por el usuario <br>
+*/
 public static void multiplyArrays(){
 	int[] multiply = new int[A.length];
 	
@@ -621,6 +741,11 @@ public static void multiplyArrays(){
 	
 }
 
+/**
+* metodo que genera un nuevo arreglo con la union de los valores de los tres arreglos digitados por el usuario, este contiene valores repetidos. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> crea un arreglo, con la union de los valores de los tres primeros arreglos digitados <br>
+*/
 public static void repeatArray(){
 	unionR = new int[array1.length + array2.length + array3.length];
 	
@@ -637,6 +762,11 @@ public static void repeatArray(){
 	}
 }
 
+/**
+* metodo que genera un nuevo arreglo con la union de los valores de los tres arreglos digitados por el usuario, este NO contiene valores repetidos. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> devuelve un arreglo con la union de los tres arreglos digitados primeramente, con elementos repetidos <br>
+*/
 public static void noRepeatArray(){
 	int[] unionNR;
 	int a=1;
@@ -669,6 +799,11 @@ public static void noRepeatArray(){
 	showArrays();
 }
 
+/**
+* metodo que genera un nuevo arreglo con la interseccion de los valores de los tres arreglos digitados por el usuario. <br>
+* <b>pre: </b> el valor del arreglo escogido debe ser positivo, entero y menor o igual a 3 <br>
+* <b>post: </b> devuelve un arreglo con la union de los tres arreglos primeramente digitados, sin elementos repetidos <br>
+*/
 public static void intersectionArray(){
 	String[] array1s =new String[array1.length];
 	String[] array2s =new String[array2.length];
@@ -728,6 +863,11 @@ public static void intersectionArray(){
 	
 }
 
+/**
+* metodo que gira los valores de un arreglo segun escoja el usuario, el arreglo que es girado es selecciona igualemnte por el usuario. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> devuelve un nuevo arreglo con los elementos correspondientes a la interseccion de los tres primeros arreglos digitados <br>
+*/
 public static void moveArray(){
 	int[] save;
 	int i = 0;
@@ -793,6 +933,11 @@ public static void moveArray(){
 	
 }
 
+/**
+* metodo que ordena un arreglo a traves del metodo llamado burbuja, el usuario decide cual arreglo sera ordenado. <br>
+* <b>pre: </b> el valor del arreglo escogido deber ser un numero positivo, entero y menor o igual a 3 <br>
+* <b>post: </b> devuelve el arreglo escogido en orden ascendente<br> 
+*/
 public static  void burbuja(){
 	System.out.print("\n >> digite cual de los tres arreglos desea ordenar: ");
 	choice1 = sc.nextInt();
@@ -843,25 +988,11 @@ public static  void burbuja(){
 	showArrays();	
 }
 
-public static void showArrays(){
-	String word, string1;
-	
-	word = "";
-	string1 = "";
-	
-	for(int i = 0 ; i<globalSize ; i++){
-		word = Integer.toString(C[i]);
-		string1 += ("| " + word + " ");
-	}
-	word = "";
-	
-	for(int j = 0 ; j<=string1.length(); j++)
-		word +="-";
-	System.out.print("\n   "+word);
-	System.out.print("\n   " + string1 + "|\n   ");
-	System.out.print(word);
-}
-
+/**
+* metodo que solicita al usuario presionar alguna tecla para continuar con el flujo del programa. <br>
+* <b>pre: </b> <br>
+* <b>post: </b> se continua con el flujo del programa <br>
+*/
 public static void pressEnterToContinue(){
 	System.out.print("\n\n  > presione enter para ir al menu...");
 	sc.nextLine();
