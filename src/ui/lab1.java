@@ -274,7 +274,7 @@ public static void letterOfEachChain(){
 	System.out.print("\n  >> ingrese la posicion del caracter que quiere saber de cada una de las cadenas: ");
 	choice1 = sc.nextInt();
 	sc.nextLine();
-	if (choice1 <= word1.length() && word1 <= word2.length() && word1 <= word3.length()){
+	if (choice1 <= word1.length() && choice1 <= word2.length() && choice1 <= word3.length()){
 		for(int i=1 ; i<=3 ; i++){
 		System.out.print("  > el caracter elegido de la cadena "+i+" es : ");
 		
